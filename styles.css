@@ -5,7 +5,7 @@ body h1 {
 body p {
   font-family: 'Noto Serif', serif;
   text-indent: 20px;
-  font-size: 120%; 
+  font-size: 1.5vw; 
 
 }
 
@@ -13,13 +13,3 @@ img {
   width: 100%;
   max-width: 500px;
 }
-
-
-@media (max-width: 400px) {
-
-  body p { 
-     font-size: 200%; 
-  }
-
-}
-img#portrait {}
