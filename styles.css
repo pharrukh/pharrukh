@@ -15,7 +15,7 @@ img {
 }
 
 
-@media only screen and (max-width: 400px) {
+@media (max-width: 400px) {
 
   body p { 
      font-size: 200%; 
