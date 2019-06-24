@@ -3,8 +3,7 @@
 :root {
   --background-color: #FAFAFA;
   --primary-color: #B0BEC5;
-  --primary-font: 'Noto Serif';
-  --secondary-font: 'Playfair Display'
-  font-size: 20px;
-  font-family: var(--primary-font), var(--secondary-font), monospace;  
+  --primary-font: 'Playfair Display';
+  --secondary-font: 'Noto Serif';
+  font-size: 20px;  
 }
