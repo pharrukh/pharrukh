@@ -6,7 +6,7 @@ body {
 h1 {
   color: #37474F;
   padding: 1% 3%;
-  font-family: var(--secondary-font);
+  font-family: var(--primary-font), sans-serif, monospace;
   font-size: 3rem;
   text-align: center;
   border-top-left-radius: 10px;
@@ -37,7 +37,7 @@ main {
 }
 
 article {
-  font-family: var(--secondaty-font);
+  font-family: var(--secondaty-font), sans-serif, monospace;
   font-size: 1.2rem;
   text-align: justify;
   padding: 2% 5% 2% 5%;

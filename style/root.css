@@ -6,5 +6,5 @@
   --primary-font: 'Noto Serif';
   --secondary-font: 'Playfair Display'
   font-size: 20px;
-  font-family: var(--primary-font), sans-serif, monospace;  
+  font-family: var(--primary-font), var(--secondary-font), monospace;  
 }
