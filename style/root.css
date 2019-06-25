@@ -1,9 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Serif|Playfair+Display&display=swap);
 
 :root {
-  --background-color: #FAFAFA;
-  --primary-color: #B0BEC5;
+  --bg: #EBEBEB;
+  --primary-color: #FAFAFA;
+  --headings-color: #37474F;
+  --text-color: black;
   --primary-font: 'Playfair Display';
   --secondary-font: 'Noto Serif';
   font-size: 20px;  
+}
+
+:root[data-theme='dark'] {
+  --bg: #333333;
+  --primary-color: #434343;
+  --headings-color: #607D8B;
+  --text-color: #B5B5B5;
 }
