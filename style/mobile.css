@@ -32,7 +32,8 @@
 
   article {
     font-size: 0.9rem;
-    word-break: break-all;
-    hyphens: auto;
+    hyphens: none;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
   }
 }
