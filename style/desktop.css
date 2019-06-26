@@ -2,7 +2,8 @@ body {
   display: grid;
   grid-template-areas:
     /* right-space -> for UI switches */
-    'left article right';
+    'left article right'
+    'left footer right';
   grid-template-columns: 1fr 16fr 1fr;  
 
   background: var(--bg);
@@ -17,7 +18,8 @@ body {
 
 .theme-icon {
   cursor: pointer;
-  height: 11vh;
+  height: 7vw;
+  max-height: 11vh;
 }
 
 h1 {
@@ -47,7 +49,7 @@ h1 {
 
 main {
   grid-area: article;
-  margin: 3vh auto 3vh auto;
+  margin: 3vh auto 6vh auto;
   max-width: 80%;
   background: var(--primary-color);
   border-radius: 10px;
@@ -81,4 +83,16 @@ html.transition *:before,
 html.transition *:after {
   transition: all 750ms !important;
   transition-delay: 0 !important;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.contribution {
+  grid-area: footer;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 0.9rem;
+  justify-content: center;
 }
