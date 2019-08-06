@@ -1,0 +1,120 @@
+@import
+  "./base/reset",
+  "./base/variables",
+  "./base/typography",
+  "./base/themes",
+  "./base/mixins";
+
+
+body {
+  background: var(--background-color);
+  font-family: "Montserrat";
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+
+  transition: background 0.8s ease-in-out;
+}
+
+// article container
+main {
+  position: relative;
+  overflow: hidden;
+  width: 65%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  padding: 3.5em;
+  border-radius: 5px;
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  background: var(--background-color-card);
+  transition: background 0.8s ease-in-out;
+
+  @include tablet {
+    width: 85%;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin: 0;
+    padding: 2em;
+    border-radius: 0;
+    background: var(--background-color);
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 5vmin;
+  font-weight: 600;
+  margin-bottom: 2vh;
+  color: var(--text-color-header);
+}
+
+article {
+
+  p {
+    margin: 0.5em 0;
+    text-align: justify;
+    font-size: 3vmin;
+    line-height: 1.3em;
+    color: var(--text-color);
+  }
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #portrait-horizontal {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1.5vh;
+  }
+  
+  #portrait-vertical {
+    width: 100px;
+    display: none;
+  }
+}
+
+#theme-toggle {
+  $toggle-size: 8vw;
+
+  position: absolute;
+  top: -$toggle-size * 0.5;
+  left: -$toggle-size * 0.5;
+  width: $toggle-size;
+  height: $toggle-size;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: var(--theme-toggle);
+  transition: all 0.5s ease-in-out;
+
+  &:active {
+    width: $toggle-size * 1.5;
+    height: $toggle-size * 1.5;
+  }
+  
+  @include mobile {
+    width: $toggle-size * 2;
+    height: $toggle-size * 2;
+    top: -$toggle-size * 0.75;
+    left: -$toggle-size * 0.75;
+  }
+
+  @include tablet {
+    width: $toggle-size * 2;
+    height: $toggle-size * 2;
+    top: -$toggle-size * 1;
+    left: -$toggle-size * 1;
+  }
+}

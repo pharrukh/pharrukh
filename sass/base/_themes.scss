@@ -1,0 +1,34 @@
+$themes: (
+  
+  'light': (
+    // layout
+    background-color: #e2e1e0,
+    background-color-card: #E8E8E8,
+    // typography
+    text-color-header: black,
+    text-color: black,
+    // navigation
+    theme-toggle: #081B33,
+  ),
+
+  'dark': (
+    // layout
+    background-color: #081B33,
+    background-color-card: #353C51,
+    // typography
+    text-color-header: white,
+    text-color: #D3D3D3,  
+    // navigation
+    theme-toggle: #e2e1e0,
+    // icons (filters)
+  ),
+
+);
+
+@each $theme, $map in $themes {
+  :root[data-theme=#{$theme}] {
+    @each $property, $value in $map {
+      --#{$property}: #{$value};
+    }
+  }
+}

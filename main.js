@@ -1,22 +1,12 @@
-window.onload = () => {
-  const toggle = document.getElementById('theme-toggle');
-  const icon = document.querySelector('.theme-icon');
-  toggle.addEventListener('click', () => {
-    if (toggle.checked) {
-      icon.src = './img/svg/eclipse.svg';
-      theme();
-      document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-      icon.src = './img/svg/moon.svg';
-      theme();
-      document.documentElement.setAttribute('data-theme', 'light');
-    }
-  });
+import getArticle from './app/fetchData.js';
+import render from './app/render.js';
+import allowThemeSwitch from './app/toggleTheme.js';
 
-  const theme = () => {
-    document.documentElement.classList.add('transition');
-    window.setTimeout( () => {
-      document.documentElement.classList.remove('transition')
-    }, 1500);
-  };
-};
+async function renderArticle() {
+  const container = document.querySelector('article');
+  const article = await getArticle();
+  render(article, container);
+}
+
+renderArticle();
+allowThemeSwitch();

@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root[data-theme=light] {
+  --background-color: #e2e1e0;
+  --background-color-card: #E8E8E8;
+  --text-color-header: black;
+  --text-color: black;
+  --theme-toggle: #081B33;
+}
+
+:root[data-theme=dark] {
+  --background-color: #081B33;
+  --background-color-card: #353C51;
+  --text-color-header: white;
+  --text-color: #D3D3D3;
+  --theme-toggle: #e2e1e0;
+}
+
+body {
+  background: var(--background-color);
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  transition: background 0.8s ease-in-out;
+}
+
+main {
+  position: relative;
+  overflow: hidden;
+  width: 65%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  padding: 3.5em;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background: var(--background-color-card);
+  transition: background 0.8s ease-in-out;
+}
+@media (max-width: 768px) {
+  main {
+    width: 85%;
+  }
+}
+@media (max-width: 576px) {
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 2em;
+    border-radius: 0;
+    background: var(--background-color);
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 5vmin;
+  font-weight: 600;
+  margin-bottom: 2vh;
+  color: var(--text-color-header);
+}
+
+article p {
+  margin: 0.5em 0;
+  text-align: justify;
+  font-size: 3vmin;
+  line-height: 1.3em;
+  color: var(--text-color);
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+figure #portrait-horizontal {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 1.5vh;
+}
+figure #portrait-vertical {
+  width: 100px;
+  display: none;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: -4vw;
+  left: -4vw;
+  width: 8vw;
+  height: 8vw;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: var(--theme-toggle);
+  transition: all 0.5s ease-in-out;
+}
+#theme-toggle:active {
+  width: 12vw;
+  height: 12vw;
+}
+@media (max-width: 576px) {
+  #theme-toggle {
+    width: 16vw;
+    height: 16vw;
+    top: -6vw;
+    left: -6vw;
+  }
+}
+@media (max-width: 768px) {
+  #theme-toggle {
+    width: 16vw;
+    height: 16vw;
+    top: -8vw;
+    left: -8vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
