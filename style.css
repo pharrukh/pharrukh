@@ -118,18 +118,20 @@ figure #portrait-vertical {
   background: var(--theme-toggle);
   transition: all 0.5s ease-in-out;
 }
-
-.animate-toggle {
-  animation: pulse 1s ease 0s 2 alternate;
-}
-@keyframes pulse {
-  from {
-    width: 8vw;
-    height: 8vw;
+@media (max-width: 576px) {
+  #theme-toggle {
+    top: -10vw;
+    left: -10vw;
+    width: 20vw;
+    height: 20vw;
   }
-  to {
-    width: 10.4vw;
-    height: 10.4vw;
+}
+@media (max-width: 768px) {
+  #theme-toggle {
+    top: -8vw;
+    left: -8vw;
+    width: 16vw;
+    height: 16vw;
   }
 }
 
