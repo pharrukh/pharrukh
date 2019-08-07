@@ -1,6 +1,8 @@
 import getArticle from './app/fetchData.js';
 import render from './app/render.js';
+
 import allowThemeSwitch from './app/toggleTheme.js';
+import { allowThemeSwitchAnimate } from './app/toggleTheme.js';
 
 async function renderArticle() {
   const container = document.querySelector('article');
@@ -9,4 +11,6 @@ async function renderArticle() {
 }
 
 renderArticle();
+
 allowThemeSwitch();
+allowThemeSwitchAnimate();

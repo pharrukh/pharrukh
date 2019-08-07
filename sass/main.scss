@@ -107,24 +107,24 @@ figure {
   outline: none;
   cursor: pointer;
   background: var(--theme-toggle);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; 
+}
 
-  &:active {
-    width: $toggle-size * 1.5;
-    height: $toggle-size * 1.5;
-  }
+.animate-toggle {
+  $toggle-size: 8vw;
+  animation: pulse 1s ease 0s 2 alternate;
+
+  @keyframes pulse {
+
+    from { 
+      width: $toggle-size;
+      height: $toggle-size;
+    }
   
-  @include mobile {
-    width: $toggle-size * 3;
-    height: $toggle-size * 3;
-    top: -$toggle-size * 1.5;
-    left: -$toggle-size * 1.5;
-  }
-
-  @include tablet {
-    width: $toggle-size * 2;
-    height: $toggle-size * 2;
-    top: -$toggle-size * 1;
-    left: -$toggle-size * 1;
+    to { 
+      width: $toggle-size * 1.3;
+      height: $toggle-size * 1.3;
+    }
+  
   }
 }
