@@ -51,8 +51,11 @@ h1 {
   text-align: center;
   font-size: 5vmin;
   font-weight: 600;
-  margin-bottom: 2vh;
   color: var(--text-color-header);
+
+  @include mobile {
+    font-size: 8vmin;
+  }
 }
 
 article {
@@ -63,6 +66,11 @@ article {
     font-size: 3vmin;
     line-height: 1.3em;
     color: var(--text-color);
+
+    @include mobile {
+      font-size: 4vmin;
+      word-break: break-word;
+    }
   }
 }
 
@@ -70,6 +78,8 @@ figure {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 
   #portrait-horizontal {
     width: 100%;
@@ -105,10 +115,10 @@ figure {
   }
   
   @include mobile {
-    width: $toggle-size * 2;
-    height: $toggle-size * 2;
-    top: -$toggle-size * 0.75;
-    left: -$toggle-size * 0.75;
+    width: $toggle-size * 3;
+    height: $toggle-size * 3;
+    top: -$toggle-size * 1.5;
+    left: -$toggle-size * 1.5;
   }
 
   @include tablet {

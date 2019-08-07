@@ -65,8 +65,12 @@ h1 {
   text-align: center;
   font-size: 5vmin;
   font-weight: 600;
-  margin-bottom: 2vh;
   color: var(--text-color-header);
+}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 8vmin;
+  }
 }
 
 article p {
@@ -76,11 +80,19 @@ article p {
   line-height: 1.3em;
   color: var(--text-color);
 }
+@media (max-width: 576px) {
+  article p {
+    font-size: 4vmin;
+    word-break: break-word;
+  }
+}
 
 figure {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 figure #portrait-horizontal {
   width: 100%;
@@ -112,10 +124,10 @@ figure #portrait-vertical {
 }
 @media (max-width: 576px) {
   #theme-toggle {
-    width: 16vw;
-    height: 16vw;
-    top: -6vw;
-    left: -6vw;
+    width: 24vw;
+    height: 24vw;
+    top: -12vw;
+    left: -12vw;
   }
 }
 @media (max-width: 768px) {
