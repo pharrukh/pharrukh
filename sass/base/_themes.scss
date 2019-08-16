@@ -9,7 +9,8 @@ $themes: (
     text-color: black,
     // navigation
     theme-toggle: #081B33,
-    align-toggle: #081B33
+    align-toggle: #081B33,
+    up-button: black
   ),
 
   'dark': (
@@ -21,8 +22,8 @@ $themes: (
     text-color: #D3D3D3,  
     // navigation
     theme-toggle: #e2e1e0,
-    align-toggle: #e2e1e0
-    // icons (filters)
+    align-toggle: #e2e1e0,
+    up-button: #e2e1e0
   ),
 
 );

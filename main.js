@@ -4,6 +4,8 @@ import render from './app/render.js';
 import allowThemeSwitch from './app/toggleTheme.js';
 import { articleAlign } from './app/articleAlign.js';
 
+import { upButton } from './app/upButton.js';
+
 async function renderArticle() {
   const container = document.querySelector('article');
   const article = await getArticle();
@@ -14,3 +16,4 @@ async function renderArticle() {
 
 renderArticle();
 allowThemeSwitch();
+upButton();

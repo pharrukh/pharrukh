@@ -14,6 +14,7 @@
   --text-color: black;
   --theme-toggle: #081B33;
   --align-toggle: #081B33;
+  --up-button: black;
 }
 
 :root[data-theme=dark] {
@@ -23,6 +24,40 @@
   --text-color: #D3D3D3;
   --theme-toggle: #e2e1e0;
   --align-toggle: #e2e1e0;
+  --up-button: #e2e1e0;
+}
+
+.up-button-container {
+  position: fixed;
+  bottom: 1vw;
+  right: 1vw;
+  height: 5vw;
+  width: 5vw;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  z-index: 1;
+}
+.up-button-container svg {
+  height: 90%;
+  width: auto;
+  fill: var(--up-button);
+}
+@media (max-width: 768px) {
+  .up-button-container {
+    height: 7.5vw;
+    width: 7.5vw;
+    right: 0;
+  }
+}
+@media (max-width: 576px) {
+  .up-button-container {
+    height: 17.5vw;
+    width: 17.5vw;
+  }
+}
+
+.up-button-container--hidden {
+  bottom: -25vw;
 }
 
 body {

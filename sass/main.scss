@@ -5,6 +5,9 @@
   "./base/themes",
   "./base/mixins";
 
+@import
+  "./upButton.scss";
+
 
 body {
   background: var(--background-color);
