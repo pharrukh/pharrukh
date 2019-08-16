@@ -13,14 +13,16 @@
   --text-color-header: black;
   --text-color: black;
   --theme-toggle: #081B33;
+  --align-toggle: #081B33;
 }
 
 :root[data-theme=dark] {
-  --background-color: #081B33;
-  --background-color-card: #353C51;
+  --background-color: #131313;
+  --background-color-card: #181818;
   --text-color-header: white;
   --text-color: #D3D3D3;
   --theme-toggle: #e2e1e0;
+  --align-toggle: #e2e1e0;
 }
 
 body {
@@ -56,6 +58,7 @@ main {
     width: 100%;
     margin: 0;
     padding: 2em;
+    padding-top: 7vh;
     border-radius: 0;
     background: var(--background-color);
   }
@@ -82,8 +85,7 @@ article p {
 }
 @media (max-width: 576px) {
   article p {
-    font-size: 4vmin;
-    word-break: break-word;
+    font-size: 4.2vmin;
   }
 }
 
@@ -118,14 +120,6 @@ figure #portrait-vertical {
   background: var(--theme-toggle);
   transition: all 0.5s ease-in-out;
 }
-@media (max-width: 576px) {
-  #theme-toggle {
-    top: -10vw;
-    left: -10vw;
-    width: 20vw;
-    height: 20vw;
-  }
-}
 @media (max-width: 768px) {
   #theme-toggle {
     top: -8vw;
@@ -133,6 +127,57 @@ figure #portrait-vertical {
     width: 16vw;
     height: 16vw;
   }
+}
+@media (max-width: 576px) {
+  #theme-toggle {
+    top: -14vw;
+    left: -14vw;
+    width: 26vw;
+    height: 26vw;
+  }
+}
+
+#switch-text-align {
+  display: none;
+}
+#switch-text-align:checked + .switch-text-align-label svg line:nth-of-type(1) {
+  transform-origin: 0% 50%;
+  transform: scale(0.5, 1);
+}
+#switch-text-align:checked + .switch-text-align-label svg line:nth-of-type(2) {
+  transform-origin: 0% 50%;
+  transform: scale(0.25, 1);
+}
+#switch-text-align:checked + .switch-text-align-label svg line:nth-of-type(4) {
+  transform-origin: 0% 50%;
+  transform: scale(0.75, 1);
+}
+
+.switch-text-align-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em;
+  height: 7vh;
+  width: 7vh;
+  padding: 1vh;
+}
+@media (max-width: 576px) {
+  .switch-text-align-label {
+    height: 7vh;
+    width: 7vh;
+  }
+}
+
+.switch-text-align {
+  height: 80%;
+  stroke: var(--align-toggle);
+  stroke-width: 20;
+  stroke-miterlimit: 10;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

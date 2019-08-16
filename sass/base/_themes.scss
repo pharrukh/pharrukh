@@ -9,17 +9,19 @@ $themes: (
     text-color: black,
     // navigation
     theme-toggle: #081B33,
+    align-toggle: #081B33
   ),
 
   'dark': (
     // layout
-    background-color: #081B33,
-    background-color-card: #353C51,
+    background-color: rgb(19, 19, 19),
+    background-color-card: rgb(24, 24, 24),
     // typography
     text-color-header: white,
     text-color: #D3D3D3,  
     // navigation
     theme-toggle: #e2e1e0,
+    align-toggle: #e2e1e0
     // icons (filters)
   ),
 
