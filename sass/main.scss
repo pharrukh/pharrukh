@@ -177,4 +177,8 @@ figure {
   stroke-width: 20;
   stroke-miterlimit: 10;
   cursor: pointer;
+
+  line {
+    transition: transform 0.25s ease;
+  }
 }

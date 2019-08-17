@@ -215,5 +215,8 @@ figure #portrait-vertical {
   stroke-miterlimit: 10;
   cursor: pointer;
 }
+.switch-text-align line {
+  transition: transform 0.25s ease;
+}
 
 /*# sourceMappingURL=style.css.map */
