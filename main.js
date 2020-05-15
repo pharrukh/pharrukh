@@ -1,19 +1,38 @@
-import getArticle from './app/fetchData.js';
-import render from './app/render.js';
+renderArticle({
+  path: "./public/article.txt",
+  container: document.querySelector("#article-contents")
+});
 
-import allowThemeSwitch from './app/toggleTheme.js';
-import { articleAlign } from './app/articleAlign.js';
+allowThemeToggle();
 
-import { upButton } from './app/upButton.js';
 
-async function renderArticle() {
-  const container = document.querySelector('article');
-  const article = await getArticle();
-  render(article, container);
-  // render before align would be possible
-  articleAlign();
+async function renderArticle({ path, container }) {
+  /**
+   * Renders article from .txt file.
+   * @param {String} path file location.
+   * @param {HTMLElement} container specified document node to render the article.
+   * @returns {undefined}
+   */
+  const fileData = await fetch(path);
+  const text = await fileData.text();
+  const article = text
+    .split('\n')
+    .map(paragraph => `<p>${paragraph}</p>`)
+    .join('');
+
+  container.insertAdjacentHTML("beforeend", article);
 }
 
-renderArticle();
-allowThemeSwitch();
-upButton();
+function allowThemeToggle() {
+  /**
+   * Switch data-theme attr of the root element.
+   */
+  const toggle = document.getElementById("theme-toggle");
+  toggle.addEventListener("click", () => {
+    document.documentElement.setAttribute("data-theme", 
+      (document.documentElement.dataset.theme === "light")
+        ? "dark"
+        : "light"
+    );
+  })
+}
