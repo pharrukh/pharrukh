@@ -1,6 +1,6 @@
 # Farrukh Normuradov
 
-I'm dad to 👦 and a husband 👨 from Samarkand 🕌 in Belin 🇩🇪.
+I'm dad to 👦 and a husband 👨 from Samarkand :uzbekistan: in Belin 🇩🇪.
 
 I:
 
